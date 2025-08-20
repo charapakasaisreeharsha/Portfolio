@@ -1,382 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" href="assets/profile-pic.png" type="image/png" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Sai Sree Harsha Charapaka</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#Proficiencies">Proficiencies</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sree Harsha Charapaka - Portfolio</title>
+    <link rel="icon" href="./assets/profile-pic.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<div class="hero-section">
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/2611250-uhd_3840_2160_30fps (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+   
+    
+    <nav class="navbar" data-animation="fade-in">
+        <div class="nav-left">Sai Sree Harsha Charapaka</div>
+        <div class="nav-right">
+            <a href="#profile">About-me</a>
+            <a href="#skills">Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Sai Sree Harsha Charapaka</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    
+    <section id="home" class="intro-section">
+        <div class="intro-content" data-animation="fade-in-up">
+            <h1>Welcome to my Portfolio</h1>
+            <p class="subtitle">"I've spent enough time in chaos to know it's not the enemy—it's just badly organized opportunity. Yet i still fail to do it lol !"</p>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#Proficiencies" onclick="toggleMenu()">Proficiencies</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        
+        <div class="intro-content-below" data-animation="fade-in-up" data-animation-delay="200">
+            <section id="recent" class="recent-work">
+                <h2>Currently Working on</h2>
+<div class="carousel-container">
+    <button class="arrow left" id="prevBtn" data-animation="fade-in-right"><i class="fas fa-chevron-left"></i></button>
+    <div class="carousel-wrapper">
+        <div class="carousel">
+    <div class="card">Working on unique code-collaborator like never before (under-development)</div>
+    <div class="card"><p>Running H&H ProjectSpace is a Tech agency that transforms startup and student ideas into solutions <a href="https://www.hnhprojectspace.com" target="_blank" rel="noopener noreferrer">Visit my site.</a></p></div>
+    <div class="card">Working on a social media App (under-development).</div>
+    <div class="card">Searching for job🥲</div> 
+</div>
+
+    </div>
+    <button class="arrow right" id="nextBtn" data-animation="fade-in-left"><i class="fas fa-chevron-right"></i></button>
+</div>
+<div class="pagination-dots" id="paginationDots"></div>
+            </section>
         </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Sree Harsha profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, call me,</p>
-        <h1 class="title">Sree Harsha</h1>
-        <p class="section__text__p2">Data Science | Data Anlaysis MachineLearning | Software Engineering</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('STILL_TIME')"
-          >
-            Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/sreeharsha9009/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/charapakasaisreeharsha'"
-          />
-        </div>
-      </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>Fresher <br />On search</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p style="font-weight: bold;">Bachelors of Technology</p>
-              <p>Going on currently</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I am a dedicated and passionate learner in the fields of Data Science and Machine Learning,
-               with a strong focus on Data Analytics. 📊🔍 My journey began with a fascination for how 
-               data-driven insights can transform decision-making processes and drive innovation across
-               various industries. 🌟🚀. 
-            </p>
-          </div>
-        </div>
+</div>
+
+<section id="profile" class="profile-section" data-animation="fade-in-up">
+  <div class="profile-container">
+    <div class="profile-image" data-animation="fade-in-right">
+      <img src="/assets/profile-pic.png" alt="sree Harsha">
+    </div>
+    <div class="profile-text" data-animation="fade-in-left">
+      <h2>Hi, I'm <span>Sree Harsha </span></h2>
+      <p>I build things ~ from smart AI models to slick web apps — mixing code, design, and a bit of stubborn curiosity until it works (and looks) right. I use every tool in my arsenal to get things done on time — timing is my impeccable quality.</p>
+      <div class="profile-links">
+        <a href="https://www.linkedin.com/in/sreeharsha9009/" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon"> LinkedIn
+        </a>
+        <a href="https://github.com/charapakasaisreeharsha" target="_blank">
+          <img src="assets/github.png" alt="GitHub" class="social-icon"> GitHub
+        </a>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Proficiencies</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Tech Stack</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MY SQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DataAnalytics</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DataVisualization</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DataStructures</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Data Science & ML</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PowerBI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MLAlgorithms</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DataModelling</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tensorflow</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Numpy & Matplotlib</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="education-section" data-animation="fade-in-up">
+    <div class="edu-left" data-animation="fade-in-right">
+        <h2>Education</h2>
+    </div>
+    <div class="edu-divider"></div>
+    <div class="edu-right" data-animation="fade-in-left">
+        <div class="edu-item">
+            <h3>B.Tech in Artificial Intelligence</h3>
+            <p>Parul University, Vadodara, Gujarat (2021 – 2025)</p>
+            <p>GPA: 7.5</p>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="projects-scroll-container">
-        <div class="projects-grid">
-          <!-- Existing project cards -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Classify</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/charapakasaisreeharsha/Classify'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='no-live-demo'">Live Demo</button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">ObjRecognizer</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/charapakasaisreeharsha/ObjRecognizer'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='no-live-demo'">Live Demo</button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Stock Prediction</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/charapakasaisreeharsha/Stock-Prediction-app'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://stock-prediction-app-djhr2k2qfiuzd88a9zmrvg.streamlit.app/'">Live Demo</button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-4.png" alt="Project 4" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">ImgPositionTracker</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/charapakasaisreeharsha/ImagePositionTracker'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='no-no-live-demo'">Live Demo</button>
+        <div class="edu-item">
+            <h3>Intermediate (MPC Stream)</h3>
+            <p>Sri Viswa Academy</p>
+            <p>GPA: 9.0</p>
+        </div>
+        <blockquote>
+            "Apart from education, college's environment taught me a lot — but most of my academics I taught myself."
+        </blockquote>
+    </div>
+</section>
+
+<section id="skills" class="skills-section" data-animation="fade-in-up">
+    <h2 class="skills-title">Expertise</h2>
+
+    <div class="skill-display-modern">
+
+        <div class="skill-card-modern" data-animation="fade-in-up">
+            <div class="skill-category-modern">Core Skills</div>
+            <div class="skill-tags-modern">
+                <span class="skill-tag-modern">Python</span>
+                <span class="skill-tag-modern">R</span>
+                <span class="skill-tag-modern">C++</span>
+                <span class="skill-tag-modern">Machine Learning</span>
+                <span class="skill-tag-modern">Data Analysis</span>
+                <span class="skill-tag-modern">Computer Vision</span>
+                <span class="skill-tag-modern">Power BI</span>
             </div>
         </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-5.png" alt="Project 4" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Airline-model</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/charapakasaisreeharsha/Airline-model'">Github</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='no-no-live-demo'">Live Demo</button>
-          </div>
-      </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>    
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">sreeharsha9009@gmail.com</a></p>
+
+        <div class="skill-card-modern" data-animation="fade-in-up" data-animation-delay="200">
+            <div class="skill-category-modern">Vibe Coding Stack</div>
+            <div class="skill-tags-modern">
+                <span class="skill-tag-modern">HTML</span>
+                <span class="skill-tag-modern">CSS</span>
+                <span class="skill-tag-modern">JavaScript</span>
+                <span class="skill-tag-modern">React</span>
+                <span class="skill-tag-modern">Native-React</span>
+                <span class="skill-tag-modern">Vite</span>
+                <span class="skill-tag-modern">TypeScript</span>
+                <span class="skill-tag-modern">Node.js</span>
+                <span class="skill-tag-modern">PHP</span>
+                <span class="skill-tag-modern">Firebase</span>
+            </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/sreeharsha9009/">LinkedIn</a></p>
+
+        <div class="skill-card-modern" data-animation="fade-in-up" data-animation-delay="400">
+            <div class="skill-category-modern">Design & UI/UX</div>
+            <div class="skill-tags-modern">
+                <span class="skill-tag-modern">Figma</span>
+                <span class="skill-tag-modern">Canva</span>
+                <span class="skill-tag-modern">Wireframing</span>
+                <span class="skill-tag-modern">Prototyping</span>
+                <span class="skill-tag-modern">UI/UX Design</span>
+            </div>
         </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-section" data-animation="fade-in-up">
+    <div class="experience-container">
+        <h2 class="experience-title">Experience</h2>
+        <p class="experience-subtitle">Real-world impact through data science and product development</p>
+        
+        <div class="experience-timeline">
+            <div class="timeline-item" data-animation="fade-in-up">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2024 (Jun-July)</div>
+                    <h3>Data Science Intern</h3>
+                    <h4>CodSoft (Remote)</h4>
+                    <ul>
+                        <li>Worked on ML models for classification and regression</li>
+                        <li>Gained hands-on experience applying machine learning to real-world problems</li>
+                        <li>Developed predictive models using Python, scikit-learn, and pandas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-animation="fade-in-up" data-animation-delay="200">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2024-2025 (Present)</div>
+                    <h3>Product Development Team</h3>
+                    <h4>Nisieon Technologies</h4>
+                    <ul>
+                        <li>Involved in product development, digital marketing, and data analysis</li>
+                        <li>Exposure to both technical development and business growth activities</li>
+                        <li>Collaborated on end-to-end product lifecycle from ideation to deployment</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 Sree Harsha. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </div>
+</section>
+
+<!--Projects Section -->
+<section id="projects" class="projects-section" data-animation="fade-in-up">
+    <div class="projects-container">
+        <h2 class="projects-title">Projects</h2>
+        <p class="projects-subtitle">Explore my open-source repositories and contributions</p>
+        <div class="projects-search">
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" id="search-projects" placeholder="Search projects..." />
+  </div>
+</div>
+
+
+        <div id="github-projects" class="projects-grid">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading projects...</p>
+            </div>
+        </div>
+    </div>
+    <p style="padding-top: 2rem;">Well there are other projects affliated with Firebase and others which are you know heavy files stored somewhere else🤫 or for sale🏷️ </p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section" data-animation="fade-in-up">
+    <div class="contact-container">
+        <h2 class="contact-title">Get In Touch</h2>
+        <p class="contact-subtitle">Let's build something amazing together</p>
+        
+        <div class="contact-content">
+            <div class="contact-info" data-animation="fade-in-right">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Contact</h3>
+                        <a href="mailto:sreeharsha9009@gmail.com">sreeharsha9009@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/sreeharsha9009/" target="_blank">sreeharsha9009</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/charapakasaisreeharsha" target="_blank">charapakasaisreeharsha</a>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form" id="contactForm" data-animation="fade-in-left">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+<!-- Modern Footer Section -->
+<footer class="modern-footer" data-animation="fade-in-up">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- Footer Brand Section -->
+            <div class="footer-brand">
+                <h3>Sai Sree Harsha Charapaka</h3>
+                <p>Building innovative solutions at the intersection of AI and web development.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/sreeharsha9009/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/charapakasaisreeharsha" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:sreeharsha9009@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Navigation -->
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#profile">About</a></li>
+                    <li><a href="#skills">Expertise</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Services -->
+            <div class="footer-services">
+                <h4>Services</h4>
+                <ul>
+                    <li>AI/ML Development</li>
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Consulting</li>
+                </ul>
+            </div>
+
+            <!-- Footer Contact Info -->
+            <div class="footer-contact">
+                <h4>Get In Touch</h4>
+                <p><i class="fas fa-envelope"></i> sreeharsha9009@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana, India</p>
+                <p><i class="fas fa-briefcase"></i> Available for hire</p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Sai Sree Harsha Charapaka. All rights reserved.</p>
+                <p>Designed & Built with ❤️ by Sree Harsha</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
 </html>
